@@ -6,9 +6,9 @@
 <body>
     <h1>Cat Images</h1>
     <ul>
-        @foreach ($catImages as $catImage)
+        @foreach ($catImage as $catImages)
             
-            <img src="{{ $catImage['url'] }}" alt="Cat Image" style="width: 150px; height:150px;">
+            <img src="{{ $catImages['url'] }}" alt="Cat Image" style="width: 180px; height:150px;">
            
         @endforeach
     </ul>

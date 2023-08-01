@@ -11,7 +11,6 @@ class CatImageController extends Controller
     public function index()
     {
         $CatsArray= [];
-        $apiKey = '2TCBEpwc7YcLN4AtKLHJ3mZvHRk_2PyL6TRL5jL1kF9VeVyn';
     
         $response = Http::withoutVerifying()->get('https://api.thecatapi.com/v1/images/search?limit=10');
        

@@ -24,7 +24,9 @@
                             <div class="alert alert-success">
                                 You are logged in!
                             </div>
-                            <a href="{{ route('catImages.index') }}">Cats</a>
+                            <a href="{{ route('catImages.index') }}">Cats</a> 
+                            <br>
+                            <a href="{{ route('makeups.showMakeup') }}">Makeup</a>
                         @endif
                     </div>
                 </div>

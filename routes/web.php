@@ -3,17 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\Auth\CatImageController;
+use App\Http\Controllers\Auth\MakeupsController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,5 +24,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/cats', [CatImageController::class, 'index'])->name('catImages.index');
 });
 
+
+Route::middleware('auth')->group(function(){
+    Route::get('/makeups', [MakeupsController::class, 'showMakeup'])->name('makeups.showMakeup');
+});
 
 
