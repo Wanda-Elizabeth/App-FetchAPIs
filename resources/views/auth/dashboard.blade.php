@@ -17,16 +17,13 @@
                     <div class="card-header">Dashboard</div>
                     <div class="card-body">
                         @if (Session::has('success'))
-                            <div class="alert alert-success">
-                                {{ Session::get('success') }}
-                            </div>
-                        @else
-                            <div class="alert alert-success">
-                                You are logged in!
-                            </div>
-                            <a href="{{ route('catImages.index') }}">Cats</a> 
-                            <br>
-                            <a href="{{ route('makeups.showMakeup') }}">Makeup</a>
+                        <div class="alert alert-success">
+                            You are logged in!
+                        </div>
+                        <a href="{{ route('catImages.index') }}">Cats</a> 
+                        <br>
+                        <a href="{{ route('makeups.showMakeup') }}">Makeup</a>
+                        
                         @endif
                     </div>
                 </div>

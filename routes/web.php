@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\Auth\CatImageController;
 use App\Http\Controllers\Auth\MakeupsController;
+use AApp\Http\Controllers\Auth\ProfilesController;
+
 
 
 
@@ -22,11 +24,10 @@ Route::group(['prefix' => ''], function () {
 });
 Route::middleware('auth')->group(function () {
     Route::get('/cats', [CatImageController::class, 'index'])->name('catImages.index');
-});
-
-
-Route::middleware('auth')->group(function(){
     Route::get('/makeups', [MakeupsController::class, 'showMakeup'])->name('makeups.showMakeup');
+    Route::get('/profile', [ProfilesController::class, 'profile'])->name('profile.profile');
 });
+
+
 
 
